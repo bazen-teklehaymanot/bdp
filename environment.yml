@@ -1,4 +1,4 @@
-name: BDP
+name: bdp-local
 channels:
   - defaults
   - conda-forge
@@ -12,5 +12,8 @@ dependencies:
   - ipywidgets
   - future
   - seaborn
-  - confluent_kafka
   - sseclient
+  - python-dotenv>=1.0.1
+  - pyspark
+  - pip:
+      - confluent_kafka

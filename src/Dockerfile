@@ -10,7 +10,6 @@ USER root
 RUN echo 'spark.sql.extensions io.delta.sql.DeltaSparkSessionExtension' >> "${SPARK_HOME}/conf/spark-defaults.conf" && \
     echo 'spark.sql.catalog.spark_catalog org.apache.spark.sql.delta.catalog.DeltaCatalog' >> "${SPARK_HOME}/conf/spark-defaults.conf"
 
-# Download necessary jars and install python packages
 RUN wget -P /usr/local/spark/jars/ https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.0/spark-sql-kafka-0-10_2.12-3.5.0.jar && \
     chmod 644 /usr/local/spark/jars/spark-sql-kafka-0-10_2.12-3.5.0.jar && \
     wget -P /usr/local/spark/jars/ https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.4.0/kafka-clients-3.4.0.jar && \
@@ -22,7 +21,7 @@ RUN wget -P /usr/local/spark/jars/ https://repo1.maven.org/maven2/org/apache/spa
     rm /usr/local/spark/jars/commons-pool-1.5.4.jar && \
     pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir python-dotenv>=1.0.1 && \
-    pip install --no-cache-dir confluent_kafka && \
+    pip install --no-cache-dir confluent-kafka && \
     pip install --no-cache-dir sseclient
 
 USER ${NB_UID}
