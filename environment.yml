@@ -17,4 +17,4 @@ dependencies:
   - pyspark
   - pip:
       - confluent_kafka
-      - geopandas
+      - folium
