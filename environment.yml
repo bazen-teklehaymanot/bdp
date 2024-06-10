@@ -1,0 +1,20 @@
+name: bdp-local
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - ipykernel
+  - ipywidgets
+  - future
+  - seaborn
+  - sseclient
+  - python-dotenv>=1.0.1
+  - pyspark
+  - pip:
+      - confluent_kafka
+      - folium
