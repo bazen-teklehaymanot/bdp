@@ -51,9 +51,11 @@ These are list of things you need to use the software and how to install them.
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Start all services using docker compose.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```sh
+   docker compose up -d
+```
 
 ## Roadmap
 
